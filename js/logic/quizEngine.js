@@ -90,6 +90,7 @@ export function selectAnswer(selectedAnswer) {
         updateState({
             userAnswers,
             answeredCurrentQuestion: true,
+            score: Math.max(0, (Number(state.score) || 0) - 25),
             incorrectAnswers: (Number(state.incorrectAnswers) || 0) + 1,
             currentStreak: 0,
         });
