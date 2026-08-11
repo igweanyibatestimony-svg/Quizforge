@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="QuizForge — fast, polished browser quizzes.">
+  <title>QuizForge — Test Your Knowledge</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="home-page">
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html" aria-label="QuizForge home">
+        <span class="brand-mark">⚡</span>
+        <span>Quiz<span>Forge</span></span>
+      </a>
+      <a class="header-link" href="pages/scores.html">🏆 High Scores</a>
+    </div>
+  </header>
+
+  <main class="home-main">
+    <section class="home-hero">
+      <div class="hero-glow hero-glow-one"></div>
+      <div class="hero-glow hero-glow-two"></div>
+      <div class="eyebrow">⚡ READY. SET. FORGE.</div>
+      <h1>Turn knowledge<br><span>into a streak.</span></h1>
+      <p class="hero-copy">Challenge yourself with fast trivia, build your streak, and see how high you can climb.</p>
+
+      <div class="hero-stats" aria-label="Quiz features">
+        <div><strong>30s</strong><span>per question</span></div>
+        <div><strong>20</strong><span>questions max</span></div>
+        <div><strong>∞</strong><span>replays</span></div>
+      </div>
+    </section>
+
+    <section class="setup-card" aria-labelledby="setup-title">
+      <div class="section-heading">
+        <div>
+          <p class="section-kicker">BUILD YOUR QUIZ</p>
+          <h2 id="setup-title">Choose your challenge</h2>
+        </div>
+        <span class="setup-icon">🎯</span>
+      </div>
+
+      <form id="quizSetupForm">
+        <div class="form-grid">
+          <label class="field">
+            <span>Difficulty</span>
+            <select id="difficulty" name="difficulty">
+              <option value="easy">Easy</option>
+              <option value="medium" selected>Medium</option>
+              <option value="hard">Hard</option>
+            </select>
+          </label>
+
+          <label class="field">
+            <span>Category</span>
+            <select id="category" name="category">
+              <option value="any" selected>Any Category</option>
+              <option value="9">General Knowledge</option>
+              <option value="17">Science &amp; Nature</option>
+              <option value="18">Computers</option>
+              <option value="21">Sports</option>
+              <option value="22">Geography</option>
+              <option value="23">History</option>
+              <option value="24">Politics</option>
+              <option value="27">Animals</option>
+              <option value="31">Anime &amp; Manga</option>
+            </select>
+          </label>
+
+          <label class="field">
+            <span>Questions</span>
+            <select id="questionCount" name="questionCount">
+              <option value="5">5 Questions</option>
+              <option value="10" selected>10 Questions</option>
+              <option value="15">15 Questions</option>
+              <option value="20">20 Questions</option>
+            </select>
+          </label>
+        </div>
+
+        <button class="btn btn-primary btn-start" type="submit">
+          <span>Start Quiz</span><span>→</span>
+        </button>
+
+        <div id="homeLoading" class="status loading hidden" aria-live="polite">
+          <span class="spinner"></span> Preparing your questions…
+        </div>
+        <div id="homeError" class="status error hidden" role="alert"></div>
+      </form>
+    </section>
+
+    <section class="feature-grid">
+      <article class="feature-card">
+        <span class="feature-icon">🔥</span>
+        <h3>Build your streak</h3>
+        <p>Correct answers in a row earn bonus points and push your best streak higher.</p>
+      </article>
+      <article class="feature-card">
+        <span class="feature-icon">⏱️</span>
+        <h3>Beat the clock</h3>
+        <p>You have 30 seconds per question. Faster correct answers earn a small time bonus.</p>
+      </article>
+      <article class="feature-card">
+        <span class="feature-icon">🏆</span>
+        <h3>Chase the leaderboard</h3>
+        <p>Your best ten runs are saved locally on your device so you can keep competing.</p>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site-footer">QuizForge • Made for quick-fire trivia</footer>
+  <script src="js/debug.js"></script>
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>

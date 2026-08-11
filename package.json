@@ -1,0 +1,11 @@
+{
+  "name": "quizforge",
+  "version": "2.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "check": "node scripts/check-js.mjs",
+    "test": "node scripts/smoke-test.mjs && node scripts/check-js.mjs",
+    "serve": "python -m http.server 8080"
+  }
+}

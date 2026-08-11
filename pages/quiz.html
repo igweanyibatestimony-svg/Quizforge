@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="QuizForge — quiz in progress.">
+  <title>QuizForge — Quiz</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="quiz-page">
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="../index.html"><span class="brand-mark">⚡</span><span>Quiz<span>Forge</span></span></a>
+      <a class="header-link danger-link" id="quitQuizBtn" href="../index.html">Quit Quiz</a>
+    </div>
+  </header>
+
+  <main class="quiz-main">
+    <div id="quizLoading" class="loading-screen">
+      <span class="spinner spinner-large"></span>
+      <p>Preparing your quiz…</p>
+    </div>
+
+    <div id="quizError" class="status error hidden" role="alert"></div>
+
+    <section id="quizContent" class="quiz-shell hidden">
+      <div class="quiz-topbar">
+        <div id="progressContainer" class="progress-area"></div>
+        <div id="timerContainer" class="timer" aria-label="Question timer"></div>
+      </div>
+
+      <div class="question-panel">
+        <div id="questionContainer"></div>
+        <div id="optionsContainer" class="options" role="group" aria-label="Answer options"></div>
+        <div id="quizFeedback" class="feedback hidden" aria-live="polite"></div>
+      </div>
+
+      <div class="quiz-actions">
+        <span class="quiz-hint">Pick one answer</span>
+        <button type="button" id="nextQuestionBtn" class="btn btn-primary hidden">Next Question <span>→</span></button>
+      </div>
+    </section>
+  </main>
+
+  <script src="../js/debug.js"></script>
+  <script type="module" src="../js/main.js"></script>
+</body>
+</html>
